@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8076898273186688290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2414, y: 0.0448, z: 0}
+  m_LocalPosition: {x: -4.2414, y: 0, z: 0}
   m_LocalScale: {x: 5.085941, y: 4.847277, z: 1}
   m_Children:
   - {fileID: 8076898273735967273}
@@ -141,6 +141,7 @@ MonoBehaviour:
   rightKey: 100
   leftKey: 113
   speed: 15
+  speedY: 5
 --- !u!1 &8076898273390813615
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ GameObject:
   - component: {fileID: 8076898273390813585}
   - component: {fileID: 8076898273390813614}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: PlayerWithChaine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,7 +297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8076898273917868667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8893, y: -0.0575, z: 0}
+  m_LocalPosition: {x: 2.8893, y: 0, z: 0}
   m_LocalScale: {x: 4.993439, y: 5.3246512, z: 1}
   m_Children:
   - {fileID: 8076898274541391550}
@@ -409,6 +410,7 @@ MonoBehaviour:
   rightKey: 275
   leftKey: 276
   speed: 15
+  speedY: 5
 --- !u!1 &8076898274541391551
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +479,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.8893, y: -0.0575}
+  m_ConnectedAnchor: {x: 2.8893, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
