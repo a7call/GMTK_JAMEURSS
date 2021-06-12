@@ -15,8 +15,9 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
-        gameManager.SetKey();
+        //GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+        //gameManager.SetKey();
+        GameManager.Instance.SetKey();
     }
 
     private void Update()

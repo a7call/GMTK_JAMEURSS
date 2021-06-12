@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
-
-
-
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
 
-    private int nbPoints;
+    private int nbPoints = 0;
+    public TextMeshProUGUI countText;
 
     private GameObject canvasPlayer;
     
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         canvasPlayer = GameObject.FindGameObjectWithTag("Canvas");
         DontDestroyOnLoad(canvasPlayer);
 
+        DisplayPoints();
         
     }
 
@@ -44,6 +45,12 @@ public class GameManager : MonoBehaviour
     public void AddPoints(int Points)
     {
         nbPoints += Points;
+        DisplayPoints();
+    }
+
+    private void DisplayPoints()
+    {
+        countText.text = nbPoints.ToString();
     }
 
     public void GameOver()
@@ -55,11 +62,7 @@ public class GameManager : MonoBehaviour
 
     #region MainMenu
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("SceneVal");
-        
-    }
+    
 
     public void QuitGame()
     {
@@ -125,7 +128,7 @@ public class GameManager : MonoBehaviour
     #region Settings
 
     public AudioMixer audioMixer;
-    public Player player1;
+    private Player player1;
     public static KeyCode rightKeyP1=KeyCode.D;
     public static KeyCode leftKeyP1=KeyCode.A;
 

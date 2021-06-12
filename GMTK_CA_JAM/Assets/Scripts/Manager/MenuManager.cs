@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("SceneVal");
+        SceneManager.LoadScene("SceneXav");
        
     }
 
@@ -40,7 +40,7 @@ public class MenuManager : MonoBehaviour
     {
         GameManager.rightKeyP1 = KeyCode.D;
         GameManager.leftKeyP1 = KeyCode.A;
-        Debug.Log(GameManager.leftKeyP1);
+        
     }
 
     public void SwitchToQD()

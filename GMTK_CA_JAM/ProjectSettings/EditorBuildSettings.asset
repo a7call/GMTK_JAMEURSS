@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneVal.unity
     guid: 49790f4c3b2701244936751aee41b647
+  - enabled: 1
+    path: Assets/Scenes/SceneXav.unity
+    guid: 2b7794237161a8b458e031c6d0d0ac24
   m_configObjects: {}

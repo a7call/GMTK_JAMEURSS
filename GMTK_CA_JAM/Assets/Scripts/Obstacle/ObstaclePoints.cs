@@ -12,32 +12,37 @@ public class ObstaclePoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         //Ref
         //Play animation
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        Debug.Log("test");
+        Debug.Log(collision.gameObject);
+        if (collision.CompareTag("Player1") || collision.CompareTag("Player2"))
         {
             GameOver();
         }
 
-        if (collision.CompareTag("Chaine"))
-        {
-            Kill();
+        //if (collision.CompareTag("Chaine"))
+        //{
+        //    Kill();
             
-        }
+        //}
     }
 
     private void GameOver()
     {
+        Debug.Log("GameOver");
         AudioManagerEffect.instance.Play(soundHit);
         GameManager.Instance.GameOver();
     }
 
     private void Kill()
     {
+        Debug.Log("Points");
         GameManager.Instance.AddPoints(points);
         AudioManagerEffect.instance.Play(soundKill);
         //Animation Kill
