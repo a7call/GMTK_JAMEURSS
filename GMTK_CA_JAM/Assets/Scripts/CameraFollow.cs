@@ -7,6 +7,15 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Transform targetToFollow;
     [SerializeField] private float offsetCamera=3f;
 
+    [SerializeField] private Transform bg1;
+    [SerializeField] private Transform bg2;
+    [SerializeField] private float size; // Bg transform.localScale.y
+
+    private void Start()
+    {
+        size = 16;
+    }
+
     private void Update()
     {
         transform.position = new Vector3(transform.position.x, targetToFollow.position.y+offsetCamera, transform.position.z);
@@ -14,7 +23,21 @@ public class CameraFollow : MonoBehaviour
         if (shakeTimeRemaining > 0 && isShaking) GlobalShake();
     }
 
-   
+    private void FixedUpdate()
+    {
+        if(transform.position.y >= bg2.position.y)
+        {
+            bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
+            SwitchBg();
+        }
+    }
+
+    private void SwitchBg()
+    {
+        Transform temp = bg1;
+        bg1 = bg2;
+        bg2 = temp;
+    }
 
 
     private float shakeTimeRemaining;
