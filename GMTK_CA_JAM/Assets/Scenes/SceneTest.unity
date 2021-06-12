@@ -250,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 7383643670631749726, guid: a56b6a153ae07ec4e9658bb309082dd8,
         type: 3}
       propertyPath: offsetCamera
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7383643670631749726, guid: a56b6a153ae07ec4e9658bb309082dd8,
         type: 3}
@@ -279,7 +279,12 @@ PrefabInstance:
     - target: {fileID: 8076898273186688293, guid: 9e21b31e77e1b2646b1f14d318bbc86b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076898273186688294, guid: 9e21b31e77e1b2646b1f14d318bbc86b,
+        type: 3}
+      propertyPath: speedY
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8076898273390813585, guid: 9e21b31e77e1b2646b1f14d318bbc86b,
         type: 3}
@@ -344,7 +349,12 @@ PrefabInstance:
     - target: {fileID: 8076898273917868666, guid: 9e21b31e77e1b2646b1f14d318bbc86b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076898273917868671, guid: 9e21b31e77e1b2646b1f14d318bbc86b,
+        type: 3}
+      propertyPath: speedY
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e21b31e77e1b2646b1f14d318bbc86b, type: 3}
