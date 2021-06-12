@@ -45,4 +45,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: -2211392152362172730, guid: a9079a611e189414186eff6c9c4d0ac1,
     type: 2}
-  sounds: []
+  sounds:
+  - name: MusicV1
+    clip: {fileID: 8300000, guid: 0e24189419d6449f1bfca70492e9f958, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

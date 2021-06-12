@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8076898273186688295}
   - component: {fileID: 8076898273186688297}
   - component: {fileID: 8076898273186688294}
-  m_Layer: 0
+  - component: {fileID: 603850239}
+  m_Layer: 6
   m_Name: P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8076898273186688290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2414, y: 0.0448, z: 0}
+  m_LocalPosition: {x: -4.2414, y: 0, z: 0}
   m_LocalScale: {x: 5.085941, y: 4.847277, z: 1}
   m_Children:
   - {fileID: 8076898273735967273}
@@ -51,7 +52,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fa3217ec1bdb3e24da9c4c9055dfdea1, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -141,6 +142,23 @@ MonoBehaviour:
   rightKey: 100
   leftKey: 113
   speed: 15
+  speedY: 5
+--- !u!58 &603850239
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076898273186688290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!1 &8076898273390813615
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +170,7 @@ GameObject:
   - component: {fileID: 8076898273390813585}
   - component: {fileID: 8076898273390813614}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: PlayerWithChaine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +220,7 @@ GameObject:
   - component: {fileID: 8076898273735967273}
   - component: {fileID: 8076898273735967275}
   - component: {fileID: 8076898273735967272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hook1
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -281,7 +299,8 @@ GameObject:
   - component: {fileID: 8076898273917868669}
   - component: {fileID: 8076898273917868670}
   - component: {fileID: 8076898273917868671}
-  m_Layer: 0
+  - component: {fileID: 1816802084}
+  m_Layer: 7
   m_Name: P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8076898273917868667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8893, y: -0.0575, z: 0}
+  m_LocalPosition: {x: 2.8893, y: 0, z: 0}
   m_LocalScale: {x: 4.993439, y: 5.3246512, z: 1}
   m_Children:
   - {fileID: 8076898274541391550}
@@ -319,7 +338,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fa3217ec1bdb3e24da9c4c9055dfdea1, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -409,6 +428,23 @@ MonoBehaviour:
   rightKey: 275
   leftKey: 276
   speed: 15
+  speedY: 5
+--- !u!58 &1816802084
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076898273917868667}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!1 &8076898274541391551
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +456,7 @@ GameObject:
   - component: {fileID: 8076898274541391550}
   - component: {fileID: 8076898274541391520}
   - component: {fileID: 8076898274541391521}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hook2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -477,7 +513,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.8893, y: -0.0575}
+  m_ConnectedAnchor: {x: 2.8893, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
