@@ -17,7 +17,8 @@ public class Player : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         //GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         //gameManager.SetKey();
-        GameManager.Instance.SetKey();
+        if(GameManager.Instance != null)
+            GameManager.Instance.SetKey();
     }
 
     private void Update()
@@ -30,5 +31,9 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(movement, speedY);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print(collision.gameObject);
     }
 }

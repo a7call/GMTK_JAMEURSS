@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3838205792077292136}
   - component: {fileID: 8498561436482191439}
   - component: {fileID: 8562879261910337410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Policier
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
+  soundKill: 
+  soundHit: 
 --- !u!50 &8498561436482191439
 Rigidbody2D:
   serializedVersion: 4

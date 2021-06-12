@@ -36,8 +36,8 @@ public class ObstaclePoints : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("GameOver");
-        AudioManagerEffect.instance.Play(soundHit);
-        GameManager.Instance.GameOver();
+        //AudioManagerEffect.instance.Play(soundHit);
+        //GameManager.Instance.GameOver();
     }
 
     private void Kill()
