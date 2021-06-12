@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
 
-    public int nbPoints = 0;
-    public TextMeshProUGUI countText;
 
     private GameObject canvasPlayer;
 
@@ -59,6 +57,10 @@ public class GameManager : MonoBehaviour
     }
 
     #region Points
+
+
+    public int nbPoints = 0;
+    public TextMeshProUGUI countText;
 
     public float PointsShakePower;
     public float PointsShakeTime;
@@ -182,12 +184,14 @@ public class GameManager : MonoBehaviour
     #region GameOver
 
     public GameObject GameOverUI;
+    public TextMeshProUGUI PointsGameOverText;
 
     public void GameOver()
     {
 
         Time.timeScale = 0;
         GameOverUI.SetActive(true);
+        PointsGameOverText.text = nbPoints.ToString();
     }
 
     public void Retry()
