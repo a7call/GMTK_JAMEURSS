@@ -11,7 +11,8 @@ public class ChaineSegment : MonoBehaviour
         if (aboveSegment != null)
         {
             aboveSegment.connectedBellow = gameObject;
-            var spriteBottomSize = connectedAbove.GetComponent<Collider2D>().bounds.size.y;
+            var spriteBottomSize = connectedAbove.GetComponent<SpriteRenderer>().bounds.size.y;
+            print(spriteBottomSize);
             GetComponent<HingeJoint2D>().connectedAnchor = new Vector2(0, -spriteBottomSize);
         }
         else
