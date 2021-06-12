@@ -48,6 +48,9 @@ MonoBehaviour:
   points: -10
   soundKill: 
   soundHit: 
+  ShakePower: 1
+  ShakeTime: 0.3
+  rotationMultiplier: 0
 --- !u!50 &3357105961902989133
 Rigidbody2D:
   serializedVersion: 4
