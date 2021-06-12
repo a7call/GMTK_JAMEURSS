@@ -27,11 +27,14 @@ public class Chaine : MonoBehaviour
             hj.connectedBody = prevBody;
             prevBody = newSegment.GetComponent<Rigidbody2D>();
         }
-        //var secondJoin = prevBody.gameObject.AddComponent(typeof(HingeJoint2D)) as HingeJoint2D;
-        //secondJoin.autoConfigureConnectedAnchor = false;
-        //secondJoin.connectedBody = hook2;
-        //secondJoin.anchor = new Vector2(0, -prevBody.GetComponent<Collider2D>().bounds.size.y);
+        var secondJoin = prevBody.gameObject.AddComponent(typeof(HingeJoint2D)) as HingeJoint2D;
+        secondJoin.autoConfigureConnectedAnchor = false;
+        secondJoin.connectedBody = hook2;
+        secondJoin.anchor = new Vector2(0, -prevBody.GetComponent<Collider2D>().bounds.size.y);
+        //secondJoin.connectedAnchor = new Vector2(0, -prevBody.GetComponent<Collider2D>().bounds.size.y);
     }
 
 
 }
+
+

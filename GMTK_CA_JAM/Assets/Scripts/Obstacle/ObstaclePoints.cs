@@ -48,7 +48,7 @@ public class ObstaclePoints : MonoBehaviour
     private void Kill()
     {
         Debug.Log("Points");
-        GameManager.Instance.AddPoints(points);
+        //GameManager.Instance.AddPoints(points);
         points = 0;
         AudioManagerEffect.instance.Play(soundKill);
         cameraFollow.StartShakeG(ShakeTime, ShakePower, rotationMultiplier);

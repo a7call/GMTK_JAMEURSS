@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(movement, speedY);
+        rb.velocity = new Vector2(movement, speedY) * Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
