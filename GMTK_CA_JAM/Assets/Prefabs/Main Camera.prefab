@@ -63,7 +63,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -103,8 +103,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -10.147913, y: 6.742751}
-  - {x: -10.112993, y: -7.438456}
+  - {x: -9.503213, y: 0.5609627}
+  - {x: -9.50504, y: -7.438456}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -125,8 +125,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 10.194933, y: 6.486866}
-  - {x: 10.165884, y: -6.414916}
+  - {x: 9.484282, y: -0.2407937}
+  - {x: 9.4848385, y: -6.414916}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -144,6 +144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetToFollow: {fileID: 0}
+  offsetCamera: 4
+  bg1: {fileID: 0}
+  bg2: {fileID: 0}
+  size: 0
 --- !u!114 &7383643670631749727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,4 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerBackground: {fileID: 0}
-  offset: 10
+  offset: 16
