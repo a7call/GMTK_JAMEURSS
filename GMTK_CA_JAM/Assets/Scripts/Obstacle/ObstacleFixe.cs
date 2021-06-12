@@ -17,7 +17,8 @@ public class ObstacleFixe : MonoBehaviour
     {
         if (collision.CompareTag("Player1") || collision.CompareTag("Player2") || collision.CompareTag("Chaine")) 
         {
-            AudioManagerEffect.instance.Play(soundHit);
+            //AudioManagerEffect.instance.Play(soundHit);
+            AudioManagerEffect.instance.Play("MortChaine");
             GameManager.Instance.GameOver();
         }
         

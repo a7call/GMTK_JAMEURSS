@@ -130,18 +130,6 @@ public class GameManager : MonoBehaviour
 
 
 
-    #region MainMenu
-
-    
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    #endregion MainMenu
-
-
     #region Pause
     public static bool isGamePaused = false;
     public GameObject settingsWindow;
@@ -188,8 +176,17 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        AudioManagerMusic.instance.StopPlaying("MusicV1");
+        StartCoroutine(GameOverUICo());
         Time.timeScale = 0;
+        
+    }
+
+    public IEnumerator GameOverUICo()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        AudioManagerEffect.instance.Play("Wasted");
+        yield return new WaitForSecondsRealtime(0.5f);
         GameOverUI.SetActive(true);
         PointsGameOverText.text = nbPoints.ToString();
     }
@@ -200,6 +197,9 @@ public class GameManager : MonoBehaviour
         DisplayWithoutShake();
         GameOverUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManagerEffect.instance.StopPlayingAll();
+        AudioManagerMusic.instance.Play("MusicV1");
+
         Time.timeScale = 1;
     }
 

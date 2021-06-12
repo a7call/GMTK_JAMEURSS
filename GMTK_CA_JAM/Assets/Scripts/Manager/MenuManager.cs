@@ -6,12 +6,18 @@ using UnityEngine.Audio;
 
 public class MenuManager : MonoBehaviour
 {
-    
-
+    private void Start()
+    {
+        AudioManagerEffect.instance.StopPlayingAll();
+        AudioManagerMusic.instance.Play("MusicV1");
+    }
     public void PlayGame()
     {
         GameManager.Instance.nbPoints = 0;
         GameManager.Instance.DisplayWithoutShake();
+        AudioManagerMusic.instance.StopPlaying("MusicV1");
+        AudioManagerMusic.instance.Play("MusicV1");
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1 );
     }
 

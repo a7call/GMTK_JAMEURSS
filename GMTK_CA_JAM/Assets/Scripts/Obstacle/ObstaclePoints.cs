@@ -40,17 +40,17 @@ public class ObstaclePoints : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("GameOver");
-        AudioManagerEffect.instance.Play(soundHit);
+        
+        AudioManagerEffect.instance.Play("MortCollision" + Random.Range(1, 3));
         GameManager.Instance.GameOver();
     }
 
     private void Kill()
     {
+        gameObject.GetComponent<Collider2D>().enabled = false;
         Debug.Log("Points");
         GameManager.Instance.AddPoints(points);
-        points = 0;
-        AudioManagerEffect.instance.Play(soundKill);
+        AudioManagerEffect.instance.Play("Conde" + Random.Range(1,9));
         cameraFollow.StartShakeG(ShakeTime, ShakePower, rotationMultiplier);
         //Animation Kill
     }
