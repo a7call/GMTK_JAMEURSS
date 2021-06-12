@@ -25,6 +25,6 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(movement, 0);
+        rb.velocity = new Vector2(movement, 2f);
     }
 }
