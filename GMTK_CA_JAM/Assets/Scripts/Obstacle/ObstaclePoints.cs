@@ -19,31 +19,31 @@ public class ObstaclePoints : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("test");
+        
         Debug.Log(collision.gameObject);
         if (collision.CompareTag("Player1") || collision.CompareTag("Player2"))
         {
             GameOver();
         }
 
-        //if (collision.CompareTag("Chaine"))
-        //{
-        //    Kill();
-            
-        //}
+        if (collision.CompareTag("Chaine"))
+        {
+            Kill();
+        }
     }
 
     private void GameOver()
     {
         Debug.Log("GameOver");
-        //AudioManagerEffect.instance.Play(soundHit);
-        //GameManager.Instance.GameOver();
+        AudioManagerEffect.instance.Play(soundHit);
+        GameManager.Instance.GameOver();
     }
 
     private void Kill()
     {
         Debug.Log("Points");
         GameManager.Instance.AddPoints(points);
+        points = 0;
         AudioManagerEffect.instance.Play(soundKill);
         //Animation Kill
     }

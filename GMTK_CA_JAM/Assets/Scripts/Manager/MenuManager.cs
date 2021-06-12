@@ -10,8 +10,9 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("SceneXav");
-       
+        GameManager.Instance.nbPoints = 0;
+        GameManager.Instance.DisplayWithoutShake();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1 );
     }
 
 
@@ -22,7 +23,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public AudioMixer audioMixer;
-    private Player player1;
+   
 
 
 

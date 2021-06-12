@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
 
-    private int nbPoints = 0;
+    public int nbPoints = 0;
     public TextMeshProUGUI countText;
 
     private GameObject canvasPlayer;
-    
+
 
     public static GameManager Instance
     {
@@ -39,26 +39,94 @@ public class GameManager : MonoBehaviour
         
     }
 
-    
 
-    //Rest of your class code
+    public void Update()
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+
+            if (isGamePaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+
+        if (shakeTimeRemaining > 0 && isShaking) GlobalShake();
+    }
+
+    #region Points
+
+    public float PointsShakePower;
+    public float PointsShakeTime;
+    public float rotationMultiplier;
+
     public void AddPoints(int Points)
     {
         nbPoints += Points;
         DisplayPoints();
     }
 
-    private void DisplayPoints()
+    public void DisplayPoints()
+    {
+        countText.text = nbPoints.ToString();
+        StartShakeG(PointsShakeTime, PointsShakePower);
+
+    }
+
+    public void DisplayWithoutShake()
     {
         countText.text = nbPoints.ToString();
     }
 
-    public void GameOver()
+
+    private float shakeTimeRemaining;
+    private float shakePower;
+    private float shakeFadeTime;
+    private float shakeRotation;
+    private bool isShaking;
+
+
+
+    public void StartShakeG(float length, float power)
     {
-        //GameOver
-        //Time.timeScale = 0;
-        //Display GameOver
+        shakeTimeRemaining = length;
+        shakePower = power;
+
+        shakeFadeTime = power / length;
+
+        shakeRotation = power * rotationMultiplier;
+
+        countText.fontSize = 60;
+
+        isShaking = true;
     }
+
+    private void GlobalShake()
+    {
+
+
+        shakeTimeRemaining -= Time.deltaTime;
+
+
+        countText.transform.rotation = Quaternion.Euler(0f, 0f, shakeRotation * Random.Range(-1f, 1f));
+
+
+        shakeRotation = Mathf.MoveTowards(shakeRotation, 0f, shakeFadeTime * rotationMultiplier * Time.deltaTime);
+
+        if (shakeTimeRemaining <= 0)
+        {
+            countText.transform.rotation = Quaternion.identity;
+            isShaking = false;
+            countText.fontSize = 40;
+        }
+    }
+    #endregion Points
+
+
 
     #region MainMenu
 
@@ -78,21 +146,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenuUI;
 
 
-    public void Update()
-    {
-        if (Input.GetKeyDown("escape"))
-        {
-            
-            if (isGamePaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
-    }
+   
 
 
     public void Pause()
@@ -123,6 +177,30 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion Pause
+
+
+    #region GameOver
+
+    public GameObject GameOverUI;
+
+    public void GameOver()
+    {
+
+        Time.timeScale = 0;
+        GameOverUI.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        nbPoints = 0;
+        DisplayWithoutShake();
+        GameOverUI.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+    }
+
+    #endregion GameOver
+
 
 
     #region Settings
@@ -166,6 +244,8 @@ public class GameManager : MonoBehaviour
 
 
     #endregion Settings
+
+
 
 }
 
