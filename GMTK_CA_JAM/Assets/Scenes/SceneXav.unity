@@ -1026,9 +1026,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7383643670631749726, guid: a56b6a153ae07ec4e9658bb309082dd8,
         type: 3}
+      propertyPath: ShakeTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383643670631749726, guid: a56b6a153ae07ec4e9658bb309082dd8,
+        type: 3}
+      propertyPath: ShakePower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383643670631749726, guid: a56b6a153ae07ec4e9658bb309082dd8,
+        type: 3}
       propertyPath: targetToFollow
       value: 
       objectReference: {fileID: 603850238}
+    - target: {fileID: 7383643670631749726, guid: a56b6a153ae07ec4e9658bb309082dd8,
+        type: 3}
+      propertyPath: rotationMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7383643670631749727, guid: a56b6a153ae07ec4e9658bb309082dd8,
         type: 3}
       propertyPath: centerBackground

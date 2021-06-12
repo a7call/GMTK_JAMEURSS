@@ -8,11 +8,17 @@ public class ObstaclePoints : MonoBehaviour
     [SerializeField] private string soundKill;
     [SerializeField] private string soundHit;
 
+    public float ShakePower;
+    public float ShakeTime;
+    public float rotationMultiplier;
+
+    private CameraFollow cameraFollow;
+
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        cameraFollow = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
         //Ref
         //Play animation
     }
@@ -45,6 +51,7 @@ public class ObstaclePoints : MonoBehaviour
         GameManager.Instance.AddPoints(points);
         points = 0;
         AudioManagerEffect.instance.Play(soundKill);
+        cameraFollow.StartShakeG(ShakeTime, ShakePower, rotationMultiplier);
         //Animation Kill
     }
 
