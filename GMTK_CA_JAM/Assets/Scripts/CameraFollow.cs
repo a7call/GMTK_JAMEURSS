@@ -11,11 +11,6 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Transform bg2;
     [SerializeField] private float size; // Bg transform.localScale.y
 
-    private void Start()
-    {
-        size = 16;
-    }
-
     private void Update()
     {
         transform.position = new Vector3(transform.position.x, targetToFollow.position.y+offsetCamera, transform.position.z);
