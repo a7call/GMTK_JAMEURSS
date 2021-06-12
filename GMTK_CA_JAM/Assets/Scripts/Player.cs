@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] public KeyCode rightKey;
     [SerializeField] public KeyCode leftKey;
     [SerializeField] private float speed;
+    [SerializeField] private float speedY;
     private float movement;
     private Rigidbody2D rb;
 
@@ -27,6 +28,6 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(movement, 0);
+        rb.velocity = new Vector2(movement, speedY);
     }
 }
