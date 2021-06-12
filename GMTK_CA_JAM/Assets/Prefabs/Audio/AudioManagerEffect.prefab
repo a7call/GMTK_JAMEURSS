@@ -45,4 +45,130 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 5648352092037929424, guid: a9079a611e189414186eff6c9c4d0ac1,
     type: 2}
-  sounds: []
+  sounds:
+  - name: Conde1
+    clip: {fileID: 8300000, guid: fefd1763b64014a60a24a30305ae014b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Conde2
+    clip: {fileID: 8300000, guid: 5566db089c3184a93b834ae4fe7e3d1f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Conde3
+    clip: {fileID: 8300000, guid: 8dbcf2d0d9d5a4ce38e237b460149c06, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Conde4
+    clip: {fileID: 8300000, guid: 17dea4ba3446e4223a70744856b211b7, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Conde5
+    clip: {fileID: 8300000, guid: cdda2c4f7978c40b7b1ca40bf67fe776, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Conde6
+    clip: {fileID: 8300000, guid: 0ef9ab9a073df4910a2a84b863241975, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Conde7
+    clip: {fileID: 8300000, guid: a620f9b77ab6348b7be907f50557afb6, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Conde8
+    clip: {fileID: 8300000, guid: 93357616948dc4d309ce9671e98879f0, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: MortChaine
+    clip: {fileID: 8300000, guid: 067f81f67694f4136826e8d0f533f4eb, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: MortCollision1
+    clip: {fileID: 8300000, guid: 6ae721fe88fa94ae8a0f236e800796cf, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: MortCollision2
+    clip: {fileID: 8300000, guid: eab933879fb4d4bca94ea02bbf73ca23, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Wasted
+    clip: {fileID: 8300000, guid: 58017e98b6a074d44bd7471421a9cd3d, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: WinLvl
+    clip: {fileID: 8300000, guid: 98a1404122e804effb267501d853bcbc, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Bonus
+    clip: {fileID: 8300000, guid: 23aecb21f14474ff18a5f335852953ed, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

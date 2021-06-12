@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
 
-    public int nbPoints = 0;
-    public TextMeshProUGUI countText;
 
     private GameObject canvasPlayer;
 
@@ -59,6 +57,10 @@ public class GameManager : MonoBehaviour
     }
 
     #region Points
+
+
+    public int nbPoints = 0;
+    public TextMeshProUGUI countText;
 
     public float PointsShakePower;
     public float PointsShakeTime;
@@ -128,18 +130,6 @@ public class GameManager : MonoBehaviour
 
 
 
-    #region MainMenu
-
-    
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    #endregion MainMenu
-
-
     #region Pause
     public static bool isGamePaused = false;
     public GameObject settingsWindow;
@@ -182,12 +172,23 @@ public class GameManager : MonoBehaviour
     #region GameOver
 
     public GameObject GameOverUI;
+    public TextMeshProUGUI PointsGameOverText;
 
     public void GameOver()
     {
-
+        AudioManagerMusic.instance.StopPlaying("MusicV1");
+        StartCoroutine(GameOverUICo());
         Time.timeScale = 0;
+        
+    }
+
+    public IEnumerator GameOverUICo()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        AudioManagerEffect.instance.Play("Wasted");
+        yield return new WaitForSecondsRealtime(0.5f);
         GameOverUI.SetActive(true);
+        PointsGameOverText.text = nbPoints.ToString();
     }
 
     public void Retry()
@@ -196,6 +197,9 @@ public class GameManager : MonoBehaviour
         DisplayWithoutShake();
         GameOverUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManagerEffect.instance.StopPlayingAll();
+        AudioManagerMusic.instance.Play("MusicV1");
+
         Time.timeScale = 1;
     }
 
