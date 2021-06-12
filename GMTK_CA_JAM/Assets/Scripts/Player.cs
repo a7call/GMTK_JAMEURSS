@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
-    [SerializeField] private KeyCode rightKey;
-    [SerializeField] private KeyCode leftKey;
+    [SerializeField] public KeyCode rightKey;
+    [SerializeField] public KeyCode leftKey;
     [SerializeField] private float speed;
     [SerializeField] private float speedY;
     private float movement;
@@ -14,7 +14,9 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();    
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+        gameManager.SetKey();
     }
 
     private void Update()
