@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector3(0, targetToFollow.position.y+offsetCamera, transform.position.z);
+        transform.position = new Vector3(transform.position.x, targetToFollow.position.y+offsetCamera, transform.position.z);
 
         if (shakeTimeRemaining > 0 && isShaking) GlobalShake();
     }
