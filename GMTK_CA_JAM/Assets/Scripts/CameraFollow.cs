@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private Transform targetToFollow;
+    private Transform targetToFollow;
     [SerializeField] private float offsetCamera=3f;
 
     [SerializeField] private Transform bg1;
     [SerializeField] private Transform bg2;
     [SerializeField] private float size; // Bg transform.localScale.y
+
+    private void Start()
+    {
+        targetToFollow = GameObject.FindGameObjectWithTag("Player1").GetComponent<Transform>();
+    }
 
     private void Update()
     {
