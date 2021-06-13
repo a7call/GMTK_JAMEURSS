@@ -78,30 +78,35 @@ public class MenuManager : MonoBehaviour
     public void LoadLevel1()
     {
         SceneManager.LoadScene("SceneNiveau0");
+        AudioManagerMusic.instance.StopPlaying("Menu");
         AudioManagerMusic.instance.Play("MusicV1");
     }
 
     public void LoadLevel2()
     {
         SceneManager.LoadScene("SceneNiveau1");
+        AudioManagerMusic.instance.StopPlaying("Menu");
         AudioManagerMusic.instance.Play("MusicV1");
     }
 
     public void LoadLevel3()
     {
         SceneManager.LoadScene("SceneNiveau2");
+        AudioManagerMusic.instance.StopPlaying("Menu");
         AudioManagerMusic.instance.Play("MusicV1");
     }
 
     public void LoadLevel4()
     {
         SceneManager.LoadScene("SceneNiveau3");
+        AudioManagerMusic.instance.StopPlaying("Menu");
         AudioManagerMusic.instance.Play("MusicV1");
     }
 
     public void LoadLevel5()
     {
         SceneManager.LoadScene("SceneNiveau4");
+        AudioManagerMusic.instance.StopPlaying("Menu");
         AudioManagerMusic.instance.Play("MusicV1");
     }
 

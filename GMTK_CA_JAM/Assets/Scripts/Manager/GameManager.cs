@@ -173,6 +173,7 @@ public class GameManager : MonoBehaviour
 
     public void QuitPause()
     {
+        audioMixer.SetFloat("Music", vMusicGameOver);
         AudioManagerMusic.instance.StopPlaying("MusicV1");
         SceneManager.LoadScene("MainMenu");
         Resume();
@@ -185,10 +186,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject GameOverUI;
     public TextMeshProUGUI PointsGameOverText;
+    private float vMusicGameOver;
 
     public void GameOver()
     {
-        AudioManagerMusic.instance.StopPlaying("MusicV1");
+        audioMixer.GetFloat("Music", out vMusicGameOver);
+        audioMixer.SetFloat("Music", -80);
         StartCoroutine(GameOverUICo());
         player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
@@ -213,9 +216,8 @@ public class GameManager : MonoBehaviour
         DisplayWithoutShake();
         GameOverUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        AudioManagerEffect.instance.StopPlayingAll();
-        AudioManagerMusic.instance.Play("MusicV1");
-
+        
+        audioMixer.SetFloat("Music", vMusicGameOver);
         Time.timeScale = 1;
     }
 
