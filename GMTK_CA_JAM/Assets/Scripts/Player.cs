@@ -27,7 +27,10 @@ public class Player : MonoBehaviour
         if(GameManager.Instance != null)
             GameManager.Instance.SetKey();
     }
-
+    private void Start()
+    {
+        GameManager.Instance.UpSound();
+    }
     private void Update()
     {
         if (Input.GetKey(rightKey)) movement = speed;
