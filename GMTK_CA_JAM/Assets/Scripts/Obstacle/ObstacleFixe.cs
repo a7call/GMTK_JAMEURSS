@@ -15,12 +15,21 @@ public class ObstacleFixe : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player1") || collision.CompareTag("Player2") || collision.CompareTag("Chaine")) 
+        
+        if (collision.CompareTag("Chaine")) 
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             //AudioManagerEffect.instance.Play(soundHit);
             AudioManagerEffect.instance.Play("MortChaine");
             GameManager.Instance.GameOver();
         }
-        
+
+       if( collision.CompareTag("Player1") || collision.CompareTag("Player2"))
+        {
+            AudioManagerEffect.instance.Play("MortCollision" + Random.Range(1, 3));
+            GameManager.Instance.GameOver();
+        }
+
+
     }
 }

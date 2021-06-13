@@ -74,5 +74,26 @@ public class MenuManager : MonoBehaviour
         GameManager.leftKeyP1 = KeyCode.Q;
     }
 
-  
+
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("SceneNiveau0");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("SceneNiveau1");
+    }
+
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("SceneNiveau2");
+    }
+
+    public void LoadLevel4()
+    {
+        SceneManager.LoadScene("SceneNiveau3");
+    }
+
+
 }
