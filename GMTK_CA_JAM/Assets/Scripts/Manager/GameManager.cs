@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private GameObject canvasPlayer;
     private Player player2;
 
-   
+    public GameObject fadeSystem;
 
 
     public static GameManager Instance

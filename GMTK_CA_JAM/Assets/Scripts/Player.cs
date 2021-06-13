@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     private Animator animator;
     [SerializeField] private float increasingSpeed;
     private GameObject cam;
-    [SerializeField] private Animator fadeSystem;
 
     private void Awake()
     {
@@ -32,7 +31,6 @@ public class Player : MonoBehaviour
         if (Input.GetKey(rightKey)) movement = speed;
         else if (Input.GetKey(leftKey)) movement = -speed;
         else movement = 0;
-        print(speedY);
     }
 
     private void FixedUpdate()
@@ -40,7 +38,6 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(movement, speedY) * Time.deltaTime;
     }
 
-    private int indexCounter = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("CheckPoint"))
@@ -50,11 +47,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    private int indexCounter = 1;
     private IEnumerator LoadingScene()
     {
-        fadeSystem.SetTrigger("FadeIn");
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Niveau" + indexCounter);
+        GameManager.Instance.fadeSystem.GetComponent<Animator>().SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("SceneNiveau" + indexCounter);
         indexCounter++;
     }
 
