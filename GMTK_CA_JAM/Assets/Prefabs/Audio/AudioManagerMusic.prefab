@@ -47,7 +47,7 @@ MonoBehaviour:
     type: 2}
   sounds:
   - name: MusicV1
-    clip: {fileID: 8300000, guid: 0e24189419d6449f1bfca70492e9f958, type: 3}
+    clip: {fileID: 8300000, guid: 48ba76b255dcc4c34915fbec34f7944a, type: 3}
     volume: 0
     volumeVariance: 0
     pitch: 0
