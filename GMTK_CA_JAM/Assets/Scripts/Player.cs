@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        GameManager.Instance.UpSound();
         GameManager.Instance.sceneIndex = SceneManager.GetActiveScene().buildIndex -2;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();

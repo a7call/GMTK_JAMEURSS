@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject GameOverUI;
     public TextMeshProUGUI PointsGameOverText;
-    private float vMusicGameOver;
+    public float vMusicGameOver;
 
     public void GameOver()
     {
@@ -219,6 +219,11 @@ public class GameManager : MonoBehaviour
         
         audioMixer.SetFloat("Music", vMusicGameOver);
         Time.timeScale = 1;
+    }
+
+    public void UpSound()
+    {
+        audioMixer.SetFloat("Music", vMusicGameOver);
     }
 
     #endregion GameOver
