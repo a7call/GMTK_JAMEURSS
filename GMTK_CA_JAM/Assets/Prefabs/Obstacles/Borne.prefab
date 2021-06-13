@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7118763093684896271}
   - component: {fileID: 6801664586069981135}
   - component: {fileID: 5412197803484344812}
+  - component: {fileID: 1824738334}
   m_Layer: 9
   m_Name: Borne
   m_TagString: Untagged
@@ -166,3 +167,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundHit: 
+--- !u!114 &1824738334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606531347838828065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb38f8ea7b46b54ead38840f3e63829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
