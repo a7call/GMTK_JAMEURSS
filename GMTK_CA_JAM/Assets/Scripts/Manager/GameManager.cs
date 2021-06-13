@@ -9,6 +9,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
+    public int sceneIndex;
 
 
     private GameObject canvasPlayer;
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
+        sceneIndex = 0;
+
 
         _instance = this;
         DontDestroyOnLoad(this.gameObject);

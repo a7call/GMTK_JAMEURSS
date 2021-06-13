@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        GameManager.Instance.sceneIndex = SceneManager.GetActiveScene().buildIndex -2;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         cam = GameObject.FindGameObjectWithTag("MainCamera");
@@ -37,23 +38,24 @@ public class Player : MonoBehaviour
     {
         rb.velocity = new Vector2(movement, speedY) * Time.deltaTime;
     }
-
+    private bool isLoading;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("CheckPoint"))
+        if (collision.gameObject.CompareTag("CheckPoint") &&  !isLoading)
         {
             cam.GetComponent<CameraFollow>().enabled = false;
+
             StartCoroutine(LoadingScene());
         }
     }
 
-    private int indexCounter = 1;
     private IEnumerator LoadingScene()
     {
         GameManager.Instance.fadeSystem.GetComponent<Animator>().SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("SceneNiveau" + indexCounter);
-        indexCounter++;
+        isLoading = true;
+        int index = GameManager.Instance.sceneIndex + 1;
+        SceneManager.LoadScene("SceneNiveau" + index);
     }
 
     public void PlayDeathAnimation()
