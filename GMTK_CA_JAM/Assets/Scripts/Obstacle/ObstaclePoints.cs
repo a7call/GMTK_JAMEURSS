@@ -16,6 +16,8 @@ public class ObstaclePoints : MonoBehaviour
 
     private Animator animator;
 
+    [SerializeField] private GameObject bloodParticle;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +49,11 @@ public class ObstaclePoints : MonoBehaviour
         GameManager.Instance.GameOver();
     }
 
+    [SerializeField] private float offsetParticle;
     private void Kill()
     {
         gameObject.GetComponent<Collider2D>().enabled = false;
+        Instantiate(bloodParticle, transform.position + new Vector3(0, offsetParticle, 0), Quaternion.identity);
         GameManager.Instance.AddPoints(points);
         animator.SetBool("IsDead", true);
         AudioManagerEffect.instance.Play("Conde" + Random.Range(1,9));

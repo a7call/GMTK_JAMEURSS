@@ -53,6 +53,9 @@ MonoBehaviour:
   ShakePower: 0.6
   ShakeTime: 0.4
   rotationMultiplier: 1
+  bloodParticle: {fileID: 2559150763175260219, guid: 63b093a51824b594db95096b8c257fe8,
+    type: 3}
+  offsetParticle: 1
 --- !u!50 &8498561436482191439
 Rigidbody2D:
   serializedVersion: 4
