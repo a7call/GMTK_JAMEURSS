@@ -52,13 +52,13 @@ public class ObstaclePoints : MonoBehaviour
     [SerializeField] private float offsetParticle;
     private void Kill()
     {
+        cameraFollow.StartShakeG(ShakeTime, ShakePower, rotationMultiplier);
         gameObject.GetComponent<Collider2D>().enabled = false;
         Instantiate(bloodParticle, transform.position + new Vector3(0, offsetParticle, 0), Quaternion.identity);
         GameManager.Instance.AddPoints(points);
         animator.SetBool("IsDead", true);
         AudioManagerEffect.instance.Play("Conde" + Random.Range(1,9));
-        cameraFollow.StartShakeG(ShakeTime, ShakePower, rotationMultiplier);
-        //Animation Kill
+        
     }
 
 

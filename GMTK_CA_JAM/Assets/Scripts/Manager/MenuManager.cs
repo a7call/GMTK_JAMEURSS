@@ -11,14 +11,14 @@ public class MenuManager : MonoBehaviour
     {
         SetVolumeSlider();
         AudioManagerEffect.instance.StopPlayingAll();
-        AudioManagerMusic.instance.Play("MusicV1");
+        AudioManagerMusic.instance.Play("Menu");
        
     }
     public void PlayGame()
     {
         GameManager.Instance.nbPoints = 0;
         GameManager.Instance.DisplayWithoutShake();
-        AudioManagerMusic.instance.StopPlaying("MusicV1");
+        AudioManagerMusic.instance.StopPlaying("Menu");
         AudioManagerMusic.instance.Play("MusicV1");
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1 );
