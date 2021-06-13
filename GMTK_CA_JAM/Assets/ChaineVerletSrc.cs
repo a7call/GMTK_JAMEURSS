@@ -8,7 +8,7 @@ public class ChaineVerletSrc : MonoBehaviour
     private List<RopeSegment> ropeSeg = new List<RopeSegment>();
     private float ropeSegLen = 0.01f;
     private int segmentLength = 30;
-    private float lineWidth = 0.75f;
+    private float lineWidth = 0.25f;
     List<Vector2> colliderPoints = new List<Vector2>();
     private GameObject P1;
     private GameObject P2;
