@@ -359,6 +359,8 @@ MonoBehaviour:
   leftKey: 113
   speed: 300
   speedY: 500
+  increasingSpeed: 0
+  fadeSystem: {fileID: 0}
 --- !u!61 &1258930292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -607,3 +609,5 @@ MonoBehaviour:
   leftKey: 276
   speed: 300
   speedY: 500
+  increasingSpeed: 0
+  fadeSystem: {fileID: 0}

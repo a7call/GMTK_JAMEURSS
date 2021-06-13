@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     
@@ -12,12 +12,15 @@ public class Player : MonoBehaviour
     private float movement;
     private Rigidbody2D rb;
     private Animator animator;
-
+    [SerializeField] private float increasingSpeed;
+    private GameObject cam;
+    [SerializeField] private Animator fadeSystem;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
         //GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
         //gameManager.SetKey();
         if(GameManager.Instance != null)
@@ -29,15 +32,30 @@ public class Player : MonoBehaviour
         if (Input.GetKey(rightKey)) movement = speed;
         else if (Input.GetKey(leftKey)) movement = -speed;
         else movement = 0;
+        print(speedY);
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(movement, speedY) * Time.deltaTime;
     }
+
+    private int indexCounter = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.gameObject);
+        if (collision.gameObject.CompareTag("CheckPoint"))
+        {
+            cam.GetComponent<CameraFollow>().enabled = false;
+            StartCoroutine(LoadingScene());
+        }
+    }
+
+    private IEnumerator LoadingScene()
+    {
+        fadeSystem.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Niveau" + indexCounter);
+        indexCounter++;
     }
 
     public void PlayDeathAnimation()
