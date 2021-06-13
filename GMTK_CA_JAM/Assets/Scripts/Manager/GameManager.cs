@@ -169,6 +169,7 @@ public class GameManager : MonoBehaviour
 
     public void QuitPause()
     {
+        AudioManagerMusic.instance.StopPlaying("MusicV1");
         SceneManager.LoadScene("MainMenu");
         Resume();
     }
