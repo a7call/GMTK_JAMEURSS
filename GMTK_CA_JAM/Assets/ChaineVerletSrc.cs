@@ -78,7 +78,6 @@ public class ChaineVerletSrc : MonoBehaviour
         }
         else
         {
-            print("test");
             return;
         }
         Vector3[] positions = pos.ToArray();
