@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
 
     private GameObject canvasPlayer;
+    private Player player2;
 
    
 
@@ -42,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     public void Update()
@@ -186,7 +187,11 @@ public class GameManager : MonoBehaviour
     {
         AudioManagerMusic.instance.StopPlaying("MusicV1");
         StartCoroutine(GameOverUICo());
-        Time.timeScale = 0;
+        player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
+        player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
+        player1.PlayDeathAnimation();
+        player2.PlayDeathAnimation();
+        //Time.timeScale = 0;
         
     }
 
@@ -194,7 +199,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.5f);
         AudioManagerEffect.instance.Play("Wasted");
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(1f);
         GameOverUI.SetActive(true);
         PointsGameOverText.text = nbPoints.ToString();
     }
