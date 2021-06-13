@@ -5,6 +5,7 @@ using UnityEngine;
 public class Borne : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] private string soundExplosion;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class Borne : MonoBehaviour
         if (collision.gameObject.CompareTag("MainCamera"))
         {
             animator.SetTrigger("isCheck");
+            AudioManagerEffect.instance.Play(soundExplosion);
         }
     }
 
