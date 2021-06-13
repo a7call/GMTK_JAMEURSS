@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     private GameObject canvasPlayer;
 
+   
+
 
     public static GameManager Instance
     {
@@ -35,8 +37,13 @@ public class GameManager : MonoBehaviour
 
         DisplayPoints();
         
+
     }
 
+    private void Start()
+    {
+        
+    }
 
     public void Update()
     {
@@ -102,7 +109,7 @@ public class GameManager : MonoBehaviour
 
         shakeRotation = power * rotationMultiplier;
 
-        countText.fontSize = 60;
+        countText.fontSize = 150;
 
         isShaking = true;
     }
@@ -123,7 +130,7 @@ public class GameManager : MonoBehaviour
         {
             countText.transform.rotation = Quaternion.identity;
             isShaking = false;
-            countText.fontSize = 40;
+            countText.fontSize = 100;
         }
     }
     #endregion Points
@@ -214,24 +221,40 @@ public class GameManager : MonoBehaviour
     public static KeyCode rightKeyP1=KeyCode.D;
     public static KeyCode leftKeyP1=KeyCode.A;
 
+    public Slider sliderMusic, sliderEffect;
+
+    private float vMusicInit,vEffectInit;
+
+    public void SetVolumeSlider()
+    {
+        audioMixer.GetFloat("Music", out vMusicInit );
+        audioMixer.GetFloat("Effect", out vEffectInit);
+
+        sliderMusic.value = Mathf.Pow(10, vMusicInit / 65);
+        sliderEffect.value = Mathf.Pow(10, vEffectInit / 65);
+
+    }
+
+   
+
 
     public void SetLevelMusic(float sliderValue)
     {
-        audioMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 20);
+        audioMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 65);
     }
 
     public void SetLevelEffect(float sliderValue)
     {
-        audioMixer.SetFloat("Effect", Mathf.Log10(sliderValue) * 20);
+        audioMixer.SetFloat("Effect", Mathf.Log10(sliderValue) * 65);
     }
 
-    private void SwitchToAD()
+    public void SwitchToAD()
     {
         rightKeyP1 = KeyCode.D;
         leftKeyP1 = KeyCode.A;
     }
 
-    private void SwitchToQD()
+    public void SwitchToQD()
     {
         rightKeyP1 = KeyCode.D;
         leftKeyP1 = KeyCode.Q;
