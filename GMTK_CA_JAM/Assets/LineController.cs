@@ -18,7 +18,8 @@ public class LineController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lr.SetPositions(nodes.ConvertAll(n => n.position - new Vector3(0, 0, 5)).ToArray());
+        //lr.SetPositions(nodes.ConvertAll(n => n.position - new Vector3(0, 0, 5)).ToArray());
+
     }
 
     public Vector3[] GetPositions()
