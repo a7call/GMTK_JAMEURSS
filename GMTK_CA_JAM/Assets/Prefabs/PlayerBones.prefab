@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258930288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1394698830021727088}
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightKey: 100
   leftKey: 113
-  speed: 300
+  speed: 400
   speedY: 500
   increasingSpeed: 0
   fadeSystem: {fileID: 0}
@@ -370,11 +370,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 1258930288}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fa3217ec1bdb3e24da9c4c9055dfdea1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0032997355, y: -0.08746326}
+  m_Offset: {x: -0.003299743, y: -0.3761329}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -385,7 +385,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.39354205, y: 0.93018305}
+  m_Size: {x: 0.39354205, y: 0.35284376}
   m_EdgeRadius: 0
 --- !u!1 &1394698830021727054
 GameObject:
@@ -450,7 +450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9145682766793336897}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2300708, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1394698830021727088}
@@ -576,11 +576,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 9145682766793336897}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fa3217ec1bdb3e24da9c4c9055dfdea1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0053849593, y: -0.09712687}
+  m_Offset: {x: -0.005384952, y: -0.365283}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -591,7 +591,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.39325356, y: 0.86961}
+  m_Size: {x: 0.39325356, y: 0.3332977}
   m_EdgeRadius: 0
 --- !u!114 &6908190619903393934
 MonoBehaviour:
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightKey: 275
   leftKey: 276
-  speed: 300
+  speed: 400
   speedY: 500
   increasingSpeed: 0
   fadeSystem: {fileID: 0}
