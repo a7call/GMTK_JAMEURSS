@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 5cdb5baf6a37d1746a1bfa4c2f8e70f8
+guid: 1416a46a4d8761045a9a879a5f4482fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7512349135389672488
-    second: LePanneau_0
+      213: 4074548718260927024
+    second: LaBorne_0
   - first:
-      213: -2315742447289221872
-    second: LePanneau_1
+      213: 5989369598250415240
+    second: LaBorne_1
   - first:
-      213: 2599119127065017037
-    second: LePanneau_2
+      213: -7661437083495646742
+    second: LaBorne_2
   - first:
-      213: 3569085922494714518
-    second: LePanneau_3
+      213: -668407847060840051
+    second: LaBorne_3
   - first:
-      213: -5519977291097776650
-    second: LePanneau_4
+      213: -1452587518159657596
+    second: LaBorne_4
   - first:
-      213: 9047811031956279508
-    second: LePanneau_5
+      213: 6308017038573627289
+    second: LaBorne_5
+  - first:
+      213: 3880232710049559382
+    second: LaBorne_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LePanneau_0
+      name: LaBorne_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 48
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +126,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8244d9b8cb9314860800000000000000
-      internalID: 7512349135389672488
+      spriteID: 03a37fba874bb8830800000000000000
+      internalID: 4074548718260927024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LePanneau_1
+      name: LaBorne_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8847d34aae38e1350800000000000000
+      internalID: 5989369598250415240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaBorne_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 64
-        height: 48
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +168,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01d38067384dcdfd0800000000000000
-      internalID: -2315742447289221872
+      spriteID: ae9bc39809b1da590800000000000000
+      internalID: -7661437083495646742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LePanneau_2
+      name: LaBorne_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81eadeba9659b6f0800000000000000
+      internalID: -668407847060840051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaBorne_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 64
-        height: 48
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +210,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dca32a9431de11420800000000000000
-      internalID: 2599119127065017037
+      spriteID: 4856dee295f57dbe0800000000000000
+      internalID: -1452587518159657596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LePanneau_3
+      name: LaBorne_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997ea4543149a8750800000000000000
+      internalID: 6308017038573627289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaBorne_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 64
-        height: 48
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,50 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69215279cb0f78130800000000000000
-      internalID: 3569085922494714518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LePanneau_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fdd4eb56e91563b0800000000000000
-      internalID: -5519977291097776650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LePanneau_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d05d9a3238409d70800000000000000
-      internalID: 9047811031956279508
+      spriteID: 653fa58671b59d530800000000000000
+      internalID: 3880232710049559382
       vertices: []
       indices: 
       edges: []
