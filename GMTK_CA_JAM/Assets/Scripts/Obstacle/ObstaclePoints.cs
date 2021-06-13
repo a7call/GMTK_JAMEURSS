@@ -14,12 +14,14 @@ public class ObstaclePoints : MonoBehaviour
 
     private CameraFollow cameraFollow;
 
+    private Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         cameraFollow = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
-        //Ref
+        animator = gameObject.GetComponent<Animator>();
         //Play animation
     }
 
@@ -48,8 +50,8 @@ public class ObstaclePoints : MonoBehaviour
     private void Kill()
     {
         gameObject.GetComponent<Collider2D>().enabled = false;
-        Debug.Log("Points");
         GameManager.Instance.AddPoints(points);
+        animator.SetBool("IsDead", true);
         AudioManagerEffect.instance.Play("Conde" + Random.Range(1,9));
         cameraFollow.StartShakeG(ShakeTime, ShakePower, rotationMultiplier);
         //Animation Kill

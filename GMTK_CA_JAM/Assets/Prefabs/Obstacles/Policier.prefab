@@ -50,7 +50,7 @@ MonoBehaviour:
   points: 10
   soundKill: Conde3
   soundHit: MortCollision1
-  ShakePower: 0.2
+  ShakePower: 0.6
   ShakeTime: 0.4
   rotationMultiplier: 1
 --- !u!50 &8498561436482191439
@@ -149,7 +149,7 @@ SpriteRenderer:
   m_Size: {x: 0.6666667, y: 1.1666666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &8832570818099244314
@@ -162,7 +162,7 @@ Animator:
   m_GameObject: {fileID: 3587591394692509773}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae11fd933efc09944839d196ae33be33, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
