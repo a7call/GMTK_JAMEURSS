@@ -95,5 +95,15 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("SceneNiveau3");
     }
 
+    public void LoadLevel5()
+    {
+        SceneManager.LoadScene("SceneNiveau4");
+    }
+
+    public void LoadLevel6()
+    {
+        SceneManager.LoadScene("SceneNiveau5");
+    }
+
 
 }
