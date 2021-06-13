@@ -141,8 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightKey: 100
   leftKey: 113
-  speed: 15
-  speedY: 10
+  speed: 300
+  speedY: 200
 --- !u!58 &603850239
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -427,8 +427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightKey: 275
   leftKey: 276
-  speed: 15
-  speedY: 10
+  speed: 300
+  speedY: 200
 --- !u!58 &1816802084
 CircleCollider2D:
   m_ObjectHideFlags: 0

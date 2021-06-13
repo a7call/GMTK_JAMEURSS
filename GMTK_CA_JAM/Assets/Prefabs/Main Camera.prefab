@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7383643670631749697}
   - component: {fileID: 7383643670631749696}
   - component: {fileID: 7383643670631749726}
-  - component: {fileID: 7383643670631749727}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -147,18 +146,4 @@ MonoBehaviour:
   offsetCamera: 4
   bg1: {fileID: 0}
   bg2: {fileID: 0}
-  size: 0
---- !u!114 &7383643670631749727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383643670631749700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd3698d9dc688074d803fcd44577acba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerBackground: {fileID: 0}
-  offset: 16
+  size: 48
