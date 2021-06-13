@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
     private void Start()
     {
+        SetVolumeSlider();
         AudioManagerEffect.instance.StopPlayingAll();
         AudioManagerMusic.instance.Play("MusicV1");
+       
     }
     public void PlayGame()
     {
@@ -19,6 +22,9 @@ public class MenuManager : MonoBehaviour
         AudioManagerMusic.instance.Play("MusicV1");
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1 );
+
+        GameManager.Instance.SetVolumeSlider();
+        
     }
 
 
@@ -29,18 +35,30 @@ public class MenuManager : MonoBehaviour
     }
 
     public AudioMixer audioMixer;
-   
 
+    public Slider sliderMusic, sliderEffect;
+
+    private float vMusicInit, vEffectInit;
+
+    private void SetVolumeSlider()
+    {
+        audioMixer.GetFloat("Music", out vMusicInit);
+        audioMixer.GetFloat("Effect", out vEffectInit);
+
+        sliderMusic.value = Mathf.Pow(10, vMusicInit / 65);
+        sliderEffect.value = Mathf.Pow(10, vEffectInit / 65);
+
+    }
 
 
     public void SetLevelMusic(float sliderValue)
     {
-        audioMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 20);
+        audioMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 65);
     }
 
     public void SetLevelEffect(float sliderValue)
     {
-        audioMixer.SetFloat("Effect", Mathf.Log10(sliderValue) * 20);
+        audioMixer.SetFloat("Effect", Mathf.Log10(sliderValue) * 65);
     }
 
     public void SwitchToAD()
